@@ -1,0 +1,18 @@
+<template>
+    <lightning-record-view-form object-api-name={objName} record-id={recordId}>
+        <div class="slds-box">
+            <template for:each={fields} for:item="item">
+                <lightning-output-field if:true={item.isClickable} key={item.fieldName} class="hover-underline-animation" field-name={item.fieldName} onclick={clickField}></lightning-output-field>
+                <lightning-output-field if:false={item.isClickable} key={item.fieldName} field-name={item.fieldName}></lightning-output-field>
+            </template>
+            <template if:true={additionalOutputs} for:each={additionalOutputs} for:item="item">
+                <div key={item.fieldName} style="margin-inline-start: 5px;">
+                    <p>{item.label}</p>
+                    <output>{item.value}</output>
+                </div>
+            </template>
+        </div>                                
+    </lightning-record-view-form>  
+
+                                         
+</template>
