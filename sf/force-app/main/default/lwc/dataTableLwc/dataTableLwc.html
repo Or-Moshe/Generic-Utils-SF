@@ -1,0 +1,78 @@
+<template>
+    <div class="slds-grid columns" >
+        <div class="slds-col" style="width: 15vw;">
+            <span class="" title="">{accNameColLabel}</span>
+        </div>
+        <template for:each={gridColumns} for:item="colItem">
+            <div key={colItem.fieldName} class="slds-col ">
+                <span class="" title={colItem.fieldName}>{colItem.label}</span>
+            </div>
+        </template>
+    </div>
+    <div class="content">
+        <template for:each={gridData} for:item="rowItem">
+            <template if:true={showMonthlyTable}>
+                <div key={rowItem.accId} class="slds-grid">
+                    <div class="slds-col" style="width: 15vw;">
+                        <span class="hover-underline-animation" title={rowItem.accName} onclick={redirect} data-acc-id={rowItem.accId}>{rowItem.accName}</span>
+                    </div>
+                    <div class="slds-col " title={rowItem.janTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="jan" onclick={openModal} value={rowItem.janTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.febTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="feb" onclick={openModal} value={rowItem.febTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.marchTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="march" onclick={openModal} value={rowItem.marchTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.aprilTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="april" onclick={openModal} value={rowItem.aprilTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.mayTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="may" onclick={openModal} value={rowItem.mayTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.juneTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="june" onclick={openModal} value={rowItem.juneTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.julyTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="july" onclick={openModal} value={rowItem.julyTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.augTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="aug" onclick={openModal} value={rowItem.augTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.sepTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="sep" onclick={openModal} value={rowItem.sepTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.ocTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="oc"  onclick={openModal} value={rowItem.ocTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.novTotalBookings}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="nov" onclick={openModal} value={rowItem.novTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col " title={rowItem.decTotalBookings} style="margin-inline-end: -3px;">
+                        <lightning-formatted-number class="hover-underline-animation" data-acc-id={rowItem.accId} data-month="dec" onclick={openModal} value={rowItem.decTotalBookings} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                </div>
+            </template>
+            <template if:false={showMonthlyTable}>
+                <div key={rowItem.accId} class="slds-grid">
+                    <div class="slds-col"  style="width: 15vw;">
+                        <span class="hover-underline-animation" title={rowItem.accName} onclick={redirect} data-acc-id={rowItem.accId}>{rowItem.accName}</span>
+                    </div>
+                    <div class="slds-col" title={rowItem.quarterly_1}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="quarterly_1" onclick={openModal} value={rowItem.quarterly_1} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col" title={rowItem.quarterly_2}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="quarterly_2" onclick={openModal} value={rowItem.quarterly_2} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col" title={rowItem.quarterly_3}>
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="quarterly_3" onclick={openModal} value={rowItem.quarterly_3} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                    <div class="slds-col" title={rowItem.quarterly_4} style="margin-inline-end: -3px;">
+                        <lightning-formatted-number class="hover-underline-animation"  data-acc-id={rowItem.accId} data-month="quarterly_4" onclick={openModal} value={rowItem.quarterly_4} format-style="currency" currency-code={rowItem.currencyCode} currency-display-as="symbol" minimum-fraction-digits="0"></lightning-formatted-number>
+                    </div>
+                </div>
+            </template>
+        </template>
+    </div>
+</template>

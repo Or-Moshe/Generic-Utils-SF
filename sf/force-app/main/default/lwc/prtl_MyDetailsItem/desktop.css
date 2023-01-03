@@ -1,0 +1,51 @@
+table{
+    width: 99%;
+    margin-inline: 5px;
+}
+table:hover{
+    background-color: #F5F7FC;
+}
+
+.slds-hint-parent{
+    padding-top: 10px;
+}
+
+.downloadButtons{
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+th, td{
+    text-align: center;
+    padding-top: 4px;
+}
+
+.tenPercent{
+    width: 10%;
+}
+
+.fifteenPercent{
+    width: 15%;
+}
+
+.fortyPercent{
+    width: 40%;
+}
+
+/*.right{
+    text-align: right;  
+}
+
+.right:dir(ltr) {
+    text-align: left;
+}
+
+.buttons-inline{
+    margin-block: 23px; 
+    display: flex;
+}*/
+
+c-prtl_-icon-container img:dir(ltr) {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

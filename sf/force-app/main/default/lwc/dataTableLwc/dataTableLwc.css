@@ -1,0 +1,118 @@
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color:  #0087ca;
+    cursor: pointer;
+  }
+
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .slds-grid:hover{
+    background-color: #f0ebeb;
+  }
+
+  .slds-col{
+    border: 0.1px solid;
+    border-color: #f1e4e4;
+    width: 5vw;
+  }
+
+  .columns{
+    background-color: white;
+  }
+  .content{
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+  }
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* .fixed_header{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_header tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.fixed_header thead tr {
+   display: block;
+}
+
+.fixed_header th, .fixed_header td {
+  padding: 5px;
+  text-align: left;
+  width: 200px;
+} */
+
+table ,tr td{
+  border:1px solid red
+}
+tbody {
+  display:block;
+  height:80px;
+  overflow:auto;
+}
+/*thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+
+thead {
+  width: calc( 100% - 1em )
+}*/
+
+
+/*
+table tr th {
+  border-right: 1px solid blue;
+  color: black
+}
+
+table tr td {
+  border-right: 1px solid blue;
+  color: black
+}*/

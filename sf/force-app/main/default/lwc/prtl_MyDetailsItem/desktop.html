@@ -1,0 +1,164 @@
+<template>
+    <table>
+        <thead>
+          <tr class="slds-line-height_reset">
+            <th data-label="col-1" class={col1} scope="col">
+              <div class="slds-truncate"></div>
+            </th>
+            <th data-label="col-2" class={col2} scope="col">
+              <div class="slds-truncate"></div>
+            </th>
+            <th data-label="col-3" class={col3} scope="col">
+              <div class="slds-truncate"></div>
+            </th>
+            <th data-label="col-4" class={col4} scope="col">
+              <div class="slds-truncate"></div>
+            </th>
+            <th data-label="col-5" class={col5} scope="col">
+              <div class="slds-truncate"></div>
+            </th>
+            <th data-label="col-6" class={col6} scope="col">
+              <div class="slds-truncate"></div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr data-label="row-1" class="slds-hint-parent">
+            <td data-label="col-1" class="col1">
+                <slot name="slot1"></slot>
+            </td>
+            <td data-label="col-2" class="col2">
+                <slot name="slot2"></slot>
+            </td>
+
+            <td data-label="col-3" class="col3">
+                <slot name="slot3"></slot>
+            </td>
+            <td data-label="col-4" class="col4">
+                <slot name="slot4"></slot>
+            </td>
+            <td data-label="col-5" class="col5">
+                <slot name="slot5"></slot>
+            </td>
+            <td data-label="col-6" class="col6">
+                <slot name="slot6"></slot>
+            </td>
+          </tr>
+
+          <tr data-label="row-2" class="slds-hint-parent" >
+            <td data-label="col-1" class="col1">
+                <slot name="slot7"></slot>
+              </td>
+            <td data-label="col-2" class="col2">
+                <slot name="slot8"></slot>
+            </td>
+
+            <td data-label="col-3" class="col3">
+                <slot name="slot9"></slot>
+            </td>
+
+            <td data-label="col-4" class="col4">
+                <slot name="slot10"></slot>
+            </td>
+
+            <td data-label="col-5" class="col5">
+                <slot name="slot11"></slot>
+            </td>
+
+            <td data-label="col-6" class="col6">
+                <slot name="slot12"></slot>
+            </td>
+          </tr>
+
+          <tr data-label="row-3" class="slds-hint-parent">
+            <td data-label="col-1" class="col1">
+                <slot name="slot13"></slot>
+            </td>
+            <td data-label="col-2" class="col2">
+                <slot name="slot14"></slot>
+            </td>
+
+            <td data-label="col-3" class="col3">
+                <slot name="slot15"></slot>
+            </td>
+            <td data-label="col-4" class="col4">
+                <slot name="slot16"></slot>
+            </td>
+            <td data-label="col-5" class="col5">
+                <slot name="slot17"></slot>
+            </td>
+            <td data-label="col-6" class="col6">
+                <slot name="slot18"></slot>
+            </td>
+          </tr>
+
+          <template if:true={isExpanded}>
+            <tr data-label="row-4" class="slds-hint-parent">
+                <td data-label="col-1" class="col1">
+                    <slot name="slot19"></slot>
+                </td>
+                <td data-label="col-2" class="col2">
+                    <slot name="slot20"></slot>
+                </td>
+
+                <td data-label="col-3" class="col3">
+                    <slot name="slot21"></slot>
+                </td>
+                <td data-label="col-4" class="col4">
+                    <slot name="slot22"></slot>
+                </td>
+                <td data-label="col-5" class="col5">
+                    <slot name="slot23"></slot>
+                </td>
+                <td data-label="col-6" class="col6">
+                    <slot name="slot24"></slot>
+                </td>
+            </tr>
+
+            <tr data-label="row-5" class="slds-hint-parent">
+                <td data-label="col-1" class="col1">
+                    <slot name="slot25"></slot>
+                </td>
+                <td data-label="col-2" class="col2">
+                    <slot name="slot26"></slot>
+                </td>
+
+                <td data-label="col-3" class="col3">
+                    <slot name="slot27"></slot>
+                </td>
+                <td data-label="col-4" class="col4">
+                    <slot name="slot28"></slot>
+                </td>
+                <td data-label="col-5" class="col5">
+                    <slot name="slot29"></slot>
+                </td>
+                <td data-label="col-6" class="col6">
+                    <slot name="slot30"></slot>
+                </td>
+            </tr>
+
+            <tr data-label="row-6" class="slds-hint-parent">
+                <td data-label="col-1" class="col1">
+                    <slot name="slot31"></slot>
+                </td>
+                <td data-label="col-2" class="col2">
+                    <slot name="slot32"></slot>
+                </td>
+                <td data-label="col-3" class="col3">
+                    <slot name="slot33"></slot>
+                </td>
+                <td data-label="col-4" class="col4">
+                    <slot name="slot34"></slot>
+                </td>
+                <td data-label="col-5" class="col5">
+                    <slot name="slot35"></slot>
+                </td>
+                <td data-label="col-6" class="col6">
+                    <slot name="slot36"></slot>
+                </td>
+            </tr>
+        </template>
+        </tbody>
+      </table>
+</template>

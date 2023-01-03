@@ -1,0 +1,83 @@
+.slds-card__header .slds-grid{
+    display: none;
+}
+.slds-box{
+    border:none;
+}
+
+.container{
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+
+/*.statusGreen{
+    background-color: #C7F7CD;
+    color: #1F8800;
+}  
+
+.statusBrown{
+    background-color: #FFEFC4;
+    color: #B17A00;
+}  
+
+.statusGray{
+    background-color: #E0E5EC;
+    color: #083555;
+}  
+
+.status{
+    width: 25%;
+    margin-inline-start: auto;
+    margin-inline-end: 5px;
+    text-align: center;
+}
+
+.date{
+    margin-inline-end: 10px; 
+    margin-bottom: 2px;
+    color: #083555;
+    font-size: 18px;
+}
+
+.expendIcon{
+    padding-inline-start: 42px;
+    margin-top: 10px;
+}
+
+.title{
+    font-size: large;
+    margin-bottom: 2px;
+    color: #083555;
+}
+
+.typeSubject{
+    font-size: 18px;
+    color: #083556;  
+}*/
+
+
+/*
+.second-div{
+    display: flex;
+
+}
+.third-div{
+    display: flex;
+
+}
+
+.tenth-div{
+    text-align: center;
+}
+
+.date{
+    margin-inline-start: 10px;
+}
+
+.time{
+    margin-inline-start: 10px;
+}
+
+.icon{
+    margin-inline-start: auto;
+}*/

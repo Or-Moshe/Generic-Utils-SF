@@ -1,0 +1,9 @@
+<template>
+
+    <button class={btnClass} onclick={clickBtn} disabled={disabled}>
+        <div if:true={firstSvgURL} class={iconBtnWrapperCls}><img src={firstSvgURL}></div>
+        <slot name="btnLabel" class="buttonLabel" style="width: 80%;"></slot>
+        <div if:true={secondSvgURL} class={iconBtnWrapperCls}><img src={secondSvgURL}></div>
+    </button>
+
+</template>

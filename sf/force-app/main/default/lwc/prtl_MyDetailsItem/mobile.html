@@ -1,0 +1,33 @@
+<template>
+    <div class="container">
+
+        <div data-id="first-div" class="first-div">
+            <slot name="slot1"></slot>
+        </div>
+        <div data-id="second-div" class="second-div">
+            <slot name="slot2"></slot>
+            <slot name="slot3"></slot>
+            <slot name="slot4"></slot>
+        </div>
+        <div data-id="third-div" class="third-div">
+            <slot name="slot5"></slot>
+            <slot name="slot6"></slot>
+        </div>
+        <slot name="slot7"></slot>
+
+        <template if:true={isExpanded}>
+            <div data-id="fifth-div" class="fifth-div">
+                <slot name="slot8"></slot>
+            </div>
+            <div data-id="sixth-div" class="sixth-div">
+                <slot name="slot9"></slot>
+            </div>
+            <div data-id="eighth-div" class="eighth-div">
+                <slot name="slot10"></slot>
+            </div>
+
+            <slot name="slot11" class="ninth-div"></slot>
+            
+        </template>
+    </div>
+</template>
